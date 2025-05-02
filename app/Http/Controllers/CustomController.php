@@ -34,8 +34,10 @@ class CustomerController extends Controller
                     'email' => $socialUser->email,
                     'role' => '2', // Role customer 
                     'status' => 1, // Status aktif 
-                    'password' => Hash::make('default_password'), // Password default 
-                    (opsional)
+                    'password' => Hash::make('default_password'), // Password default (opsional)
+                    'hp' => rand(),
+                    'foto' => $socialUser->avatar
+                    
                 ]);
 
                 // Buat data customer 
